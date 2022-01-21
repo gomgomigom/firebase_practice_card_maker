@@ -1,0 +1,12 @@
+@value makerBlack from '../../common/colors.css';
+@value makerGrey from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+
+.header {
+  font-size: 3rem;
+  background-color: makerGrey;
+}
+
+.title {
+  color: makerWhite;
+}

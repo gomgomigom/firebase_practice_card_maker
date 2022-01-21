@@ -1,0 +1,24 @@
+@value makerBlack from '../../common/colors.css';
+@value makerGreen from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+@value makerWheat from '../../common/colors.css';
+
+.header {
+  width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: makerGreen;
+}
+
+.logo {
+  margin: 0.6rem;
+}
+
+.title {
+  color: makerWhite;
+  margin: 0.6rem;
+}

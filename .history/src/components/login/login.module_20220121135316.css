@@ -1,0 +1,34 @@
+@value makerGrey from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: makerGrey;
+  padding: 2rem;
+}
+
+.loginList {
+  width: 40rem;
+  height: 50rem;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: makerWhite;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0.5rem;
+}

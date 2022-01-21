@@ -1,0 +1,8 @@
+@value makerBlack import '../../common/colors.css';
+@value makerGrey import '../../common/colors.css';
+@value makerGrey: #626262;
+
+.header {
+  font-size: 3rem;
+  background-color: makerBlack;
+}

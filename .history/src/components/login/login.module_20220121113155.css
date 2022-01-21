@@ -1,0 +1,5 @@
+@makerlightgrey from '../common/colors.css'
+
+.login {
+  background-color: makerLightGrey;
+}

@@ -1,0 +1,8 @@
+@value makerGrey from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+
+.footer {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+}

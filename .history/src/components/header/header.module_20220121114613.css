@@ -1,0 +1,6 @@
+@value makerBlack import '../../common/colors.css';
+
+.header {
+  width: 50%;
+  background-color: makerBlack;
+}

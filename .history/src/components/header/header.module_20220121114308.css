@@ -1,0 +1,5 @@
+@value makerBlack import '../../common/colors.css';
+
+.header {
+  background-color: makerBlack;
+}
