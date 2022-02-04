@@ -8,12 +8,12 @@ function App({ authService }) {
     <div className={styles.container}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login authService={authService} />}></Route>
-          <Route
-            path='/maker'
-            element={<Maker authService={authService} />}
-          ></Route>
-          <Route path='*' element={<p>There's nothing here!</p>}></Route>
+          <Route path='/' element={<Login authService={authService} />}>
+            <Login authService={authService} />
+          </Route>
+          <Route path='/maker'>
+            <Maker />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

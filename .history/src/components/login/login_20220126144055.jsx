@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -6,21 +6,17 @@ import styles from './login.module.css';
 
 const Login = ({ authService }) => {
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const { state } = state;
   const goToMaker = (userId) => {
     navigate('/maker', { state: { id: userId } });
-    console.log(userId);
+    console.log({ state });
   };
   const onLogin = (event) => {
     authService //
       .login(event.currentTarget.textContent)
-      .then((data) => goToMaker(data.user.uid) & console.log(data));
+      .then((data) => goToMaker(data.user.uid));
   };
-
-  useEffect(() => {
-    authService.onAuthChange((user) => {
-      user && goToMaker(user.uid);
-    });
-  });
 
   return (
     <section className={styles.login}>
