@@ -1,4 +1,4 @@
-@value mediaQuery from '../../common/size.css';
+@value mediaQuery from '../../common/colors.css';
 
 .maker {
   width: 100%;
@@ -13,7 +13,7 @@
   flex: 1;
 }
 
-@media screen and (max-width: mediaQuery) {
+@media screen and (max-width: 700px) {
   .container {
     flex-direction: column;
   }

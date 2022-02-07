@@ -1,0 +1,16 @@
+.maker {
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flexdirection: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

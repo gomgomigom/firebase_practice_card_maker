@@ -1,0 +1,15 @@
+.maker {
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  flexdirection: column;
+  justify-content: space-around;
+}

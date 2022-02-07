@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Editor from '../editor/editor';
 import Footer from '../footer/footer';
 import Header from '../header/header';
-import Preview from '../preview/preview';
 import styles from './maker.module.css';
 // import styles from './maker.module.css';
 
@@ -24,10 +22,7 @@ const Maker = ({ authService }) => {
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
-      <div className={styles.container}>
-        <Editor />
-        <Preview />
-      </div>
+      <h1>{location.state.id.slice(0, 4)}</h1>
       <Footer />
     </section>
   );

@@ -1,0 +1,6 @@
+.editor {
+  flex: 50%;
+  text-align: center;
+  background-color: #fff;
+  border: 0 10px 0 0 solid black;
+}

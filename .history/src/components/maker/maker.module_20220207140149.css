@@ -1,5 +1,9 @@
 @value mediaQuery from '../../common/size.css';
 
+* {
+  box-sizing: border-box;
+}
+
 .maker {
   width: 100%;
   max-width: 1200px;
