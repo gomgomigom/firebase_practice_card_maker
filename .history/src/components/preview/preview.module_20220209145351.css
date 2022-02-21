@@ -1,0 +1,12 @@
+.preview {
+  flex: 50%;
+  background-color: wheat;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}

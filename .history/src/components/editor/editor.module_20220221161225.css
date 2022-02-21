@@ -1,0 +1,12 @@
+@value makerGrey from '../../common/colors.css';
+
+.editor {
+  flex: 50%;
+  text-align: center;
+  background-color: #fff;
+  border-right: 1px makerGrey solid;
+}
+
+.title {
+  title: 100%;
+}

@@ -1,0 +1,5 @@
+@value makerBlack, makerWhite from '../../common/colors.css';
+
+.form {
+  display: flex;
+}

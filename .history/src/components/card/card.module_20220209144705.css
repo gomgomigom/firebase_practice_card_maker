@@ -1,0 +1,9 @@
+@value makerBlack from '../../common/colors.css';
+
+.card {
+  display: flex;
+  width: 90%;
+  background-color: makerBlack;
+  padding: 0.2rem;
+  align-items: center;
+}

@@ -1,0 +1,11 @@
+.preview {
+  flex: 50%;
+  background-color: wheat;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

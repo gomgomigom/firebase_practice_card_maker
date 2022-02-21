@@ -1,0 +1,7 @@
+.preview {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
+  text-align: center;
+}
