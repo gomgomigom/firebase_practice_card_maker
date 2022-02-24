@@ -59,7 +59,7 @@ const Maker = ({ authService }) => {
 
   const addCard = (card) => {
     const updated = [...cards, card];
-    setCards(updated);
+    console.log(card);
   };
 
   return (

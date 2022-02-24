@@ -1,55 +1,66 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
-import styles from './card_edit_form.module.css';
+import styles from './card_add_form.module.css';
 
-const CardEditForm = ({ card }) => {
-  const { name, company, theme, title, email, message, fileName, fileURL } =
-    card;
-  const onSubmit = () => {};
+const CardAddForm = () => {
+  const name = useRef();
+  const company = useRef();
+  const theme = useRef();
+  const title = useRef();
+  const email = useRef();
+  const message = useRef();
+  const onSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <form className={styles.form}>
       <input
+        ref={name}
         className={styles.input}
         type='text'
         name='name'
-        value={name}
+        placeholder='name'
       ></input>
       <input
+        ref={company}
         className={styles.input}
         type='text'
-        name='name'
-        value={company}
+        name='company'
+        placeholder='company'
       ></input>
-      <select className={styles.select} name='theme' value={theme}>
+      <select ref={theme} className={styles.select} name='theme' value='theme'>
         <option value='light'>light</option>
         <option value='dark'>dark</option>
         <option value='colorful'>colorful</option>
       </select>
       <input
+        ref={title}
         className={styles.input}
         type='text'
-        name='name'
-        value={title}
+        name='title'
+        placeholder='title'
       ></input>
       <input
+        ref={email}
         className={styles.input}
         type='text'
-        name='name'
-        value={email}
+        name='email'
+        placeholder='email'
       ></input>
       <textarea
+        ref={message}
         className={styles.textarea}
         name='message'
-        value={message}
+        placeholder='message'
       ></textarea>
       <div className={styles.fileInput}>
         <ImageFileInput />
       </div>
-      <Button name='Delete' onClick={onSubmit} />
+      <Button name='Add' onClick={onSubmit} />
     </form>
   );
 };
 
-export default CardEditForm;
+export default CardAddForm;

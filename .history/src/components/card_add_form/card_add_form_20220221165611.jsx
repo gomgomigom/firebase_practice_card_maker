@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
-import styles from './card_edit_form.module.css';
+import styles from './card_add_form.module.css';
 
-const CardEditForm = ({ card }) => {
+const CardAddForm = ({ card }) => {
   const { name, company, theme, title, email, message, fileName, fileURL } =
     card;
   const onSubmit = () => {};
@@ -23,9 +23,9 @@ const CardEditForm = ({ card }) => {
         value={company}
       ></input>
       <select className={styles.select} name='theme' value={theme}>
-        <option value='light'>light</option>
-        <option value='dark'>dark</option>
-        <option value='colorful'>colorful</option>
+        <option value='light'>Light</option>
+        <option value='dark'>Dark</option>
+        <option value='colorful'>Colorful</option>
       </select>
       <input
         className={styles.input}
@@ -52,4 +52,4 @@ const CardEditForm = ({ card }) => {
   );
 };
 
-export default CardEditForm;
+export default CardAddForm;
