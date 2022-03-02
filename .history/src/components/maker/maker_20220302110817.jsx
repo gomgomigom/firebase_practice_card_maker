@@ -68,7 +68,7 @@ const Maker = ({ authService }) => {
   const deleteCard = (card) => {
     setCards((cards) => {
       const updated = { ...cards };
-      delete updated[card.id];
+      updated[card.id] = null;
       return updated;
     });
     console.log(card);

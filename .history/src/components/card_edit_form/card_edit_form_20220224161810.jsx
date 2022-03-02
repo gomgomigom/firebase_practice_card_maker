@@ -7,10 +7,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
   const { name, company, theme, title, email, message, fileName, fileURL } =
     card;
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    deleteCard(card);
-  };
+  const onSubmit = () => {};
 
   const onChange = (event) => {
     if (event.currentTarget == null) {
@@ -18,10 +15,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
     }
     event.preventDefault();
     console.log(event.currentTarget);
-    updateCard({
-      ...card,
-      [event.currentTarget.name]: event.currentTarget.value,
-    });
+    updateCard(event.currentTarget.type);
   };
 
   return (
@@ -36,16 +30,10 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
       <input
         className={styles.input}
         type='text'
-        name='company'
+        name='name'
         value={company}
-        onChange={onChange}
       ></input>
-      <select
-        className={styles.select}
-        name='theme'
-        value={theme}
-        onChange={onChange}
-      >
+      <select className={styles.select} name='theme' value={theme}>
         <option value='light'>light</option>
         <option value='dark'>dark</option>
         <option value='colorful'>colorful</option>
@@ -53,22 +41,19 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
       <input
         className={styles.input}
         type='text'
-        name='title'
+        name='name'
         value={title}
-        onChange={onChange}
       ></input>
       <input
         className={styles.input}
         type='text'
-        name='email'
+        name='name'
         value={email}
-        onChange={onChange}
       ></input>
       <textarea
         className={styles.textarea}
         name='message'
         value={message}
-        onChange={onChange}
       ></textarea>
       <div className={styles.fileInput}>
         <ImageFileInput />

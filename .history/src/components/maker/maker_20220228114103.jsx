@@ -19,8 +19,12 @@ const Maker = ({ authService }) => {
       message: 'go for it',
       fileName: 'gom',
       fileURL: null,
+    }
+  }
+    {
+      
     },
-    2: {
+    {
       id: '2',
       name: 'Gom2',
       company: 'AboutLaw',
@@ -31,7 +35,7 @@ const Maker = ({ authService }) => {
       fileName: 'gom',
       fileURL: 'gom.png',
     },
-    3: {
+    {
       id: '3',
       name: 'Gom3',
       company: 'AboutLaw',
@@ -42,7 +46,7 @@ const Maker = ({ authService }) => {
       fileName: 'gom',
       fileURL: null,
     },
-  });
+  ]);
   const navigate = useNavigate();
   const location = useLocation();
   const onLogout = () => {
@@ -57,20 +61,17 @@ const Maker = ({ authService }) => {
     });
   });
 
-  const createOrUpdateCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      updated[card.id] = card;
-      return updated;
-    });
+  const addCard = (card) => {
+    const updated = [...cards, card];
+    setCards(updated);
+  };
+
+  const updateCard = (card) => {
+    const updated = [...cards];
+    console.log(card);
   };
 
   const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
     console.log(card);
   };
 
@@ -80,8 +81,8 @@ const Maker = ({ authService }) => {
       <div className={styles.container}>
         <Editor
           cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
+          addCard={addCard}
+          updateCard={updateCard}
           deleteCard={deleteCard}
         />
         <Preview cards={cards} />

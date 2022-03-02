@@ -57,20 +57,21 @@ const Maker = ({ authService }) => {
     });
   });
 
-  const createOrUpdateCard = (card) => {
+  const addCard = (card) => {
+    const updated = { ...cards, card };
+    setCards(updated);
+  };
+
+  const updateCard = (card) => {
     setCards((cards) => {
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;
     });
+    console.log(card);
   };
 
   const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
     console.log(card);
   };
 
@@ -80,8 +81,8 @@ const Maker = ({ authService }) => {
       <div className={styles.container}>
         <Editor
           cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
+          addCard={addCard}
+          updateCard={updateCard}
           deleteCard={deleteCard}
         />
         <Preview cards={cards} />

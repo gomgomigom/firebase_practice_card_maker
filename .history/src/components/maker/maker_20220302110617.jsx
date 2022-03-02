@@ -57,20 +57,21 @@ const Maker = ({ authService }) => {
     });
   });
 
+  const addCard = (card) => {
+    const updated = { ...cards, card };
+    setCards(updated);
+  };
+
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;
     });
+    console.log(card);
   };
 
   const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
     console.log(card);
   };
 
